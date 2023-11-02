@@ -1,6 +1,8 @@
 #ifndef BINARY_TREES_H
 #define BINARY_TREES_H
 
+
+
 /******************STANDARD LIBRARIES***********/
 #include <stdio.h>
 #include <stddef.h>
@@ -25,6 +27,7 @@ typedef struct binary_tree_s binary_tree_t;
 /*****************FUNCTION PROTOTYPES***********/
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_node(binary_tree_t *, int);
+binary_tree_t *binary_tree_insert_left(binary_tree_t *, int);
 
 
 #endif
