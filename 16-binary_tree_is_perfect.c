@@ -13,8 +13,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	ls = binary_tree_size(tree->left);
-	rs = binary_tree_size(tree->right);
+	ls = (int)binary_tree_size(tree->left);
+	rs = (int)binary_tree_size(tree->right);
 
 	if (binary_tree_is_full(tree->left) && ls == rs)
 		return (1);
