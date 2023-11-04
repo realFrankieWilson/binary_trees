@@ -8,6 +8,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <limits.h>
 
 
 
@@ -21,6 +22,7 @@ struct binary_tree_s
 };
 
 typedef struct binary_tree_s binary_tree_t;
+typedef struct binary_tree_s bst_t;
 
 
 
@@ -46,6 +48,28 @@ int binary_tree_is_perfect(const binary_tree_t *);
 binary_tree_t *binary_tree_sibling(binary_tree_t *);
 binary_tree_t *binary_tree_uncle(binary_tree_t *);
 
+
+/***********************ADVANCED TASKS**************************/
+binary_tree_t *binary_trees_ancestor(
+	const binary_tree_t *, const binary_tree_t *
+	);
+
+void binary_tree_levelorder(
+	const binary_tree_t *, void (*)(int)
+	);
+
+int binary_tree_is_complete(const binary_tree_t *);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *);
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *);
+int binary_tree_is_bst(const binary_tree_t *);
+
+
+
+/**********************BST**************************************/
+bst_t *bst_insert(bst_t **, int);
+bst_t *array_to_bst(int *, size_t);
+bst_t *bst_search(const bst_t *, int);
+bst_t *bst_remove(bst_t *, int);
 
 
 
